@@ -1,4 +1,5 @@
 <?php
+require_once("../../config/conexion.php");
     class  Pedidos extends Conectar{
         public function get_pedidos(){
             $conectar=parent::conexion();
