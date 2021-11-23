@@ -1,17 +1,17 @@
 <?php
     class Conectar
     {
-        Protected $dbh;
+        Protected $bdh;
         Protected function conexion()
         {
             try
             {
-                $conectar = $this->dbh = new PDO("mysql:host=34.68.196.220;dbname=g3_20","G3_20","tfc4C852");
+                $conectar = $this->bdh = new PDO("mysql:host=34.68.196.220;dbname=g3_20","G3_20","tfc4C852");
                 return $conectar;
             }
             catch(Exception $e)
             {
-                print "error BD" .$e->getmessage(). "<br/>";
+                print "¡Error BD!:" .$e->get_message(). "<br/>";
                 die();
 
             }

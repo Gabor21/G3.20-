@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
 
 header('Content-Type: application/json');
-require_once("../../config/conexion.php");
+require_once("../../Config/Conexion.php");
 require_once("../../Pedidos/models/pedidos.php");
 $pedidos = new Pedidos();
 
