@@ -12,8 +12,8 @@
     header('content-type: application/json');
 
 
-    require_once("../Config/Conexion.php");
-    require_once("../Models/articulo.php");
+    require_once("../../Config/Conexion.php");
+    require_once("../../Articulos/Models/articulo.php");
     $Articulos=new Articulos();
 
     $body=json_decode(file_get_contents("php://input"),true);
