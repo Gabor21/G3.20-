@@ -11,7 +11,7 @@
             }
             catch(Exception $e)
             {
-                print "error BD" .$e->get_message(). "<br/>";
+                print "¡Error BD!:" .$e->get_message(). "<br/>";
                 die();
 
             }
