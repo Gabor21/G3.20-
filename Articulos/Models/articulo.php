@@ -8,10 +8,10 @@ class Articulos extends Conectar
         $sql="SELECT * from ma_articulos Where estado=1";
         $sql=$conectar->prepare($sql);
         $sql->execute();
-        return$resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
+        return $resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
     }
 
-    public function Get_articulo_id($id)
+    public function Get_articulo_id($ID)
     {
         $conectar= parent::conexion();
         parent::set_names();
@@ -19,25 +19,23 @@ class Articulos extends Conectar
         $sql=$conectar->prepare($sql);
         $sql->bindvalue(1,$ID);
         $sql->execute();
-        return$resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
+        return $resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
     }
 
     Public Function Insert_articulo($ID_socio,$Descripcion,$unidad,$costo,$Precio,$Aplica_ISV,$porcentaje_ISV)
     {
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="INSERT Into ma_articulos(ID_socio,Descripcion,Unidad,Costo,Precio,Aplica_ISV,Porcentaje_ISV,Estado)
+        $sql="INSERT Into ma_articulos(ID,ID_socio,Descripcion,Unidad,Costo,Precio,Aplica_ISV,Porcentaje_ISV,Estado)
         Values  (Null,?,?,?,?,?,?,?,?'1');";
         $sql=$conectar->prepare($sql);
-        $sql->blinvalues(1,$ID);
-        $sql->blinvalues(2,$ID_socio);
-        $sql->blindvalues(3,$Descripcion);
-        $sql->blindvalue(4,$unidad);
-        $sql->blindvalue(5,$costo);
-        $sql->blindvalue(6,$Precio);
-        $sql->blindvalue(7,$Aplica_ISV);
-        $sql->blindvalue(8,$porcentaje_ISV);
-        $sql->blindvalue(9,$Estado);
+        $sql->blinvalues(1,$ID_socio);
+        $sql->blindvalues(2,$Descripcion);
+        $sql->blindvalue(3,$Unidad);
+        $sql->blindvalue(4,$Costo);
+        $sql->blindvalue(5,$Precio);
+        $sql->blindvalue(6,$Aplica_ISV);
+        $sql->blindvalue(7,$Porcentaje_ISV);
         $sql->execute();
         return$resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
     }
@@ -48,9 +46,9 @@ class Articulos extends Conectar
         parent::set_names();
         $sql="SELECT * from ma_articulos where ID=?";
         $sql=$conectar->prepare($sql);
-        $sql->bindvalue(1,$id);
+        $sql->bindvalue(1,$ID);
         $sql->execute();
-        return$resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
+        return $resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
     }
     Public Function actualizar_articulo($ID_socio,$Descripcion,$unidad,$costo,$Precio,$Aplica_ISV,$porcentaje_ISV)
     {
@@ -65,8 +63,9 @@ class Articulos extends Conectar
         $sql->blindvalue(5,$Precio);
         $sql->blindvalue(6,$Aplica_ISV);
         $sql->blindvalue(7,$porcentaje_ISV);
+        $sql->blindvalue(8,$ID);
         $sql->execute();
-        return$resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
+        return $resultados=$sql->fetchALL(PDO::FETCH_ASSOC);
     }
 }
 
