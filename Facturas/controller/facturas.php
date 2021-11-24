@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 
 require_once("../models/Facturas.php"); 
-require_once("../config/conexion.php");
+require_once("../../config/conexion.php");
 
 $facturas = new Facturas();
 
