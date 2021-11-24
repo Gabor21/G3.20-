@@ -1,6 +1,6 @@
 <?php
 
-require_once("../config/conexion.php");
+require_once("../../config/conexion.php");
 class Facturas extends Conectar{
 
     public function getFacturas(){
