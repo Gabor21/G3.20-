@@ -1,6 +1,6 @@
 <?php
 
-require_once("../config/conexion.php");
+require_once("../../config/conexion.php");
 class Socios_negocio extends Conectar{
 
     public function get_socios_negocio(){
