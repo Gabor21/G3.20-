@@ -11,32 +11,8 @@ header ( 'Content-Type: text/plain' );
 die (); } 
 header ( 'Access-Control-Allow-Origin: *' );
 
-
-
-
-/*
-PARA PRUEBA
-https://localhost/G3_20/controler/socios_negocio.php?op=get_socios_negocio
-https://localhost/G3_20/controler/socios_negocio.php?op=get_socio_negocio
-https://localhost/G3_20/controler/socios_negocio.php?op=update_socio_negocio
-https://localhost/G3_20/controler/socios_negocio.php?op=insert_socio_negocio
-https://localhost/G3_20/controler/socios_negocio.php?op=delete_socio_negocio
-
-{
-"id" : "7",
-"nombre" : "Dillan",
-"razon_social" : "Dillan Corp",
-"direccion" : "Choloma",
-"tipo_socio" : "2", 
-"contacto" : "El DIllon", 
-"email" : "dillan@gmail.com",            
-"estado" : "1" ,
-"telefono" : "01800777"
-}
-*/ 
-
 require_once("../models/Socios_negocio.php"); 
-require_once("../config/conexion.php");
+require_once("../../config/conexion.php");
 
 $socios_negocio = new Socios_negocio();
 
