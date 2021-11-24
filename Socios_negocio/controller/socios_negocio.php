@@ -11,6 +11,7 @@ header ( 'Content-Type: text/plain' );
 die (); } 
 header ( 'Access-Control-Allow-Origin: *' );
 
+
 require_once("../models/Socios_negocio.php"); 
 require_once("../../config/conexion.php");
 
